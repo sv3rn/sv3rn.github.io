@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouvez la différence</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body id="b">
+    <div id="menu"><h1 id="find">Trouvez la différence</h1><button onclick="game()">Jouer</button><h1 id="find">Javascript activé est nécessaire pour démarrer Le jeu</h1></div>
+<div id="game" style="display: none;">
+<h1 id="find">Trouvez la différence</h1>
+<table>
+    <tr>
+        <img src="https://pomf2.lain.la/f/1gylbkl6.jpeg">
+        <img src="https://pomf2.lain.la/f/1gylbkl6.jpeg">
+    </tr>
+</table>
+</div>
+<div id="vi" style="display: none;"><video id="video" src="https://pomf2.lain.la/f/z1gsasfp.mp4" muted autoplay loop playsinline style="pointer-events: none;"></video></div>
+<script>
+    const menu = document.getElementById("menu");
+    const gme = document.getElementById("game");
+    const bd = document.getElementById("b");
+    const vd = document.getElementById("vi");
+    const video = document.getElementById("video");
+    function game() {
+menu.style.display = "none"
+gme.style.display = "block"
+setTimeout(boo, 4000);
+    }
+    function boo() {
+     var audio = new Audio("https://pomf2.lain.la/f/r8upx6j.mp3");
+    audio.loop = true;
+        menu.style.display = "none"
+gme.style.display = "none"
+vd.style.display = "block"
+video.requestFullscreen();
+video.controls = false
+audio.play()
+    }
+    jQuery(document).on('keyup',function(evt) {
+    if (evt.keyCode == 27) {
+       boo();
+    }
+});
+</script>
+<style>
+    #find {
+        text-align: center;
+    }
+    #menu {
+        text-align: center
+    }
+</style>
+</body>
+</html>
